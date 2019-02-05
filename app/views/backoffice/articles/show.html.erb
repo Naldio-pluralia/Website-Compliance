@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @backoffice_article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @backoffice_article.body %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @backoffice_article.published_at %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @backoffice_article.author %>
+</p>
+
+<%= link_to 'Edit', edit_backoffice_article_path(@backoffice_article) %> |
+<%= link_to 'Back', backoffice_articles_path %>

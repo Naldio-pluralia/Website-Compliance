@@ -1,0 +1,32 @@
+<%= form_with(model: backoffice_author, local: true) do |form| %>
+  <% if backoffice_author.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backoffice_author.errors.count, "error") %> prohibited this backoffice_author from being saved:</h2>
+
+      <ul>
+      <% backoffice_author.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :backoffice_author_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :backoffice_author_date_of_birth, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :backoffice_author_description, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary'%>
+  </div>
+<% end %>

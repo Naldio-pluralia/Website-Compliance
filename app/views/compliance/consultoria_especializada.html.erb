@@ -1,0 +1,20 @@
+<section class='nav-mb'>
+  <div class='container'>
+    <h2>Consultoria Especializada em Compliance</h2>
+    <hr>
+    <p>
+      Profissionais experientes e altamente qualificados atendem às necessidades das empresas nos mais variados assuntos relativos a Consultoria em Compliance, incluindo Risk Assessment, Due Diligences, avaliação da efetividade dos Mecanismos de Integridade, elaboração e revisão de políticas e procedimentos, implementação de parte ou do Mecanismo de Integridade completo, entre outros.
+    </p>
+    <h3>Produtos</h3>
+    <div class= 'row'>
+      
+      <% @produtos_da_consultoria.each do |produto| %>
+      <div class='col-4'>
+        <h4><%= produto.name %></h4>
+        <p><%= link_description(produto) %><%= link_to 'Saiba mais', "/product_consult/#{produto.name_path}", class:'saiba-mais btn btn-primary' %></p>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</section>

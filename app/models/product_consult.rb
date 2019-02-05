@@ -1,0 +1,2 @@
+class ProductConsult < ApplicationRecord
+end

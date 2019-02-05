@@ -1,0 +1,53 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light menu">
+  <div class="container">
+    <%= link_to setting[:logo], root_path, class:'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <%# <li class="nav-item <%= active('index') %>
+        <%# <%= link_to 'Home', root_path, class: 'nav-link'%> 
+      <%# </li> %>
+      <li class="nav-item <%= active('about') %>">
+        <%= link_to 'Sobre', sobre_path, class: 'nav-link'%>
+      </li>
+      <li class="nav-item <%= active('compliance') %>">
+        <%= link_to 'Compliance', '#', class: 'nav-link'%>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdowns" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Soluções
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdowns"> 
+          <%  @solutions.each do |solution| %>
+            <%= link_to solution.name, solution_path(solution), class: 'dropdown-item' %>
+          <% end %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownc" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Conteúdos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownc"> 
+          <%= link_to 'Ebooks', '/', class: 'dropdown-item' %>
+          <%= link_to 'Artigos', '/', class: 'dropdown-item' %>
+          <%= link_to 'Videos', '/', class: 'dropdown-item' %>
+          <%= link_to 'Depoimentos', '/', class: 'dropdown-item' %>
+        </div>
+      </li>
+      <li class="nav-item <%= active('contact') %>">
+        <%= link_to 'Contactos', '/#contactos', class: 'nav-link'%>
+      </li>
+      <li class="nav-item <%= active('login') %>">
+        <%= link_to 'Login', admin_path, class: 'nav-link'%>
+      </li>
+    </ul>
+    <%# <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> %>
+  </div>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<section class='nav-mb'>
+  <div class='container'>
+    <h2>Soluções em Treinamentos</h2>
+    <hr>
+    <p>
+      Especialistas ministram treinamentos presenciais relativos a Compliance e/ou preparam treinamentos via Web (EAD), com utilização de ferramentas próprias para essa finalidade. Escopo, conteúdos e linguagem são customizáveis, conforme a necessidade de cada cliente. Certificados personalizados são fornecidos para todos os treinamentos.
+    </p>
+    <h3>Produtos</h3>
+    <div class= 'row'>
+      
+      <% @produtos_do_treinamento.each do |produto| %>
+      <div class='col-4'>
+        <h4><%= produto.name %></h4>
+        <p><%= link_description(produto) %><%= link_to 'Saiba mais', "/product_trainner/#{produto.name_path}", class:'saiba-mais btn btn-primary' %></p>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</section>

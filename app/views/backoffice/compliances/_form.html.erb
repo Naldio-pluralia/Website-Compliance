@@ -1,0 +1,32 @@
+<%= form_with(model: backoffice_compliance, local: true) do |form| %>
+  <% if backoffice_compliance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backoffice_compliance.errors.count, "error") %> prohibited this backoffice_compliance from being saved:</h2>
+
+      <ul>
+      <% backoffice_compliance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :backoffice_compliance_title, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.trix_editor :body%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :published_at %>
+    <%= form.date_select :published_at, id: :backoffice_compliance_published_at, class: 'form-control'%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary'%>
+  </div>
+<% end %>

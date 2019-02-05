@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @backoffice_author.name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @backoffice_author.date_of_birth %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @backoffice_author.description %>
+</p>
+
+<%= link_to 'Edit', edit_backoffice_author_path(@backoffice_author) %> |
+<%= link_to 'Back', backoffice_authors_path %>

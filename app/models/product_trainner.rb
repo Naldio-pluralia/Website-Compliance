@@ -1,0 +1,2 @@
+class ProductTrainner < ApplicationRecord
+end

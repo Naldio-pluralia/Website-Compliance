@@ -1,0 +1,2 @@
+module Backoffice::AuthorsHelper
+end

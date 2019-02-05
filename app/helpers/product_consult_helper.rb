@@ -1,0 +1,2 @@
+module ProductConsultHelper
+end

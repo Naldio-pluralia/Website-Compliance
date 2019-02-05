@@ -1,0 +1,69 @@
+<footer id='contactos'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12 col-md-6 col-lg-6 contact-dica pt-3'>
+        <h3>Entre em contato <br>com nossos especialistas em Compliance</h3>
+        <p>
+         A <%= setting[:name] %> dispoe de um time de executivos pronto para atendê-lo, ajudando você e sua empresa na identificação das melhores soluções personalizadas em compliance. Contate-nos.
+        </p>
+        <hr>
+        <h4>Sede Talatona</h4>
+        <p>+55 11 5181.0545 | +55 11 5181.1862 | Av. Dr. Chucri Zaidan, 1550 / conjunto 2502 CEP 04711-130 | São Paulo/SP | Brasil</p>
+      </div>
+      <div class='col-sm-12 col-md-6 col-lg-6'>
+        <form class='form-contact'>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Seu Nome">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Seu Sobrenome">
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col'>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Seu email">
+            </div>
+          </div>
+          <div class='row'>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sua Empresa">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Seu Telefone">
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Sua Cidade">
+                </div>
+                <div class="col">
+                  <select class="form-control" placeholder="Sua Provincia">
+                    <% set_provincias.each do |provincia|%>
+                       <option><%= provincia[:provincia] %></option>
+                    <% end %>
+                  </select>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col'>
+                  <textarea class="form-control" id="exampleInputEmail1" placeholder="Sua Mensagem" rows="10" cols="30"></textarea>
+                </div>
+              </div>
+              <div class='row'>
+              <div class="col">
+                <input type='submit' value='Enivar Mensagem' class='btn btn-primary'>
+                </div>
+              </div>
+            </div>
+            </div>  
+            
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+  </div>
+</footer>

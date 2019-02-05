@@ -1,0 +1,20 @@
+<section class='nav-mb'>
+  <div class='container'>
+    <h2>Tecnologia para Compliance</h2>
+    <hr>
+    <p>
+      A Compliance Total oferece ferramentas inovadoras e essenciais para maximizar o desempenho de alguns processos de Compliance, tais como, Assessment Online, Gestão de Terceiros, Proibição de Retaliação, Integridade Plus, entre outros.
+    </p>
+    <h3>Produtos</h3>
+    <div class= 'row'>
+      
+      <% @produtos_da_tecnologia.each do |produto| %>
+      <div class='col-md-12'>
+        <h4><%= produto.name %></h4>
+        <p><%= produto.description %></p>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</section>

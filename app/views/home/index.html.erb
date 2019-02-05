@@ -1,0 +1,114 @@
+<%# Carousel  %>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/slider-1-2.png" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/slider-2-2.png" class="d-block" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div class='section-main'>
+  <div class='container'>
+    <div class="row">
+      <div class="col-lg-3 col-sm-12 col-md-12 ">
+        <h2 class="sub-titulo-home">Conheça nossas soluções em <%= setting[:name]%></h2>
+        <hr>
+        <p style='text-align:justify'>
+          Contamos com soluções em implementação e gestão de Mecanismos de Integridade e Consultoria em Compliance, do 0 ao 100%
+        </p>
+      </div>
+      <div class='col-lg-9 col-sm-12 col-md-12'>
+        <div class='row solutions'>
+          <% @solutions.each do |solution| %>
+            <div class="col-lg-6 col-sm-12 col-md-12">
+              <h3><%= link_to solution.name, "compliance/#{solution.name_path}" %></h3>
+              <p>
+                <%= link_to solution.description, "compliance/#{solution.name_path}" %>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# section 2 %>
+<section class="section-destaque bg-foto hr-g">
+  <div class='container'>
+    <div class='block-center'>
+      <h2>Consultoria em Compliance</h2>
+      <p>
+        O Mecanismo de Integridade é a forma mais efetiva, no ambiente corporativo, para o combate à corrupção, fraudes, lavagem de dinheiro e demais ilicitudes contra a administração pública. Baseia-se em 3 pilares de sustentação: prevenção, detecção e correção. Mas, existem premissas obrigatórias para o seu real funcionamento prático, como a presença do “Tone at the Top”, processos regulares de comunicação e treinamento para toda a força de trabalho, canal de denúncia efetivo, processos de apuração e políticas de consequência. Muitos utilizam a palavra “Compliance”, cujo significado literal restringe-se ao cumprimento de leis e regras. Porém, sugerimos expandir a sua intepretação, de forma a alcançar a integridade e ética. Dessa forma, esperamos encontrar na empresa a cultura e o desejo genuíno de se fazer o certo, independentemente da existência de lei.
+      </p>
+      <p style='text-align: center'>
+        <%= link_to 'Leia mais', '#', class: 'btn btn-primary'%>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class='section-destaque bg-dark'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-6'>
+        <div class='newsletter'>
+          <h2>Newsletter</h2>
+          
+          <p>
+            Cadastre-se em nossa news e receba as notícias mais relevantes sobre Compliance em seu e-mail.
+          </p>
+          <form class="form">
+            <input class="form-control mr-sm-2" type="email" placeholder="Insira aqui o seu email" aria-label="email">
+            <button class="btn btn-primary" type="submit">Inscreva-se</button>
+          </form>
+        </div>
+      </div>
+      <div class='col-6'>    
+        <%= render partial: 'layouts/slide' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class='section-destaque'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-6'>
+        <h2>Vídeos sobre Compliance</h2>
+        <hr>
+        <h3><%= setting[:name] %>| Institucional</h3>
+        <p>
+          Com profissionais experientes e de alta qualificação técnica, auxiliamos as empresas de qualquer natureza, porte e segmento de mercado, com produtos e soluções inovadoras, customizadas para a necessidade de cada um e com a garantia de agregar valor aos nossos clientes. Seja qual for a necessidade da sua empresa, nós oferecemos a solução certa para fazer o certo.
+        </p>
+        <p>
+          <%= link_to 'Assista', content_videos_path, class: 'btn btn-primary'%>
+        </p>
+      </div>
+      <div class='col-6'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HJ73oEGhJYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <%= render template: 'layouts/footer' %>
+
+
+

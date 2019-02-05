@@ -1,0 +1,37 @@
+<%= form_with(model: backoffice_article, local: true) do |form| %>
+  <% if backoffice_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backoffice_article.errors.count, "error") %> prohibited this backoffice_article from being saved:</h2>
+
+      <ul>
+      <% backoffice_article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :backoffice_article_title, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :backoffice_article_body , class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :published_at %>
+    <%= form.date_select :published_at, id: :backoffice_article_published_at, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :author_id %>
+    <%= form.text_field :author_id, id: :backoffice_article_author_id, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary'%>
+  </div>
+<% end %>

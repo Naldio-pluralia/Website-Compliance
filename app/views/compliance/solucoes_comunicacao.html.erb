@@ -1,0 +1,20 @@
+<section class='nav-mb'>
+  <div class='container'>
+    <h2>Soluções em Comunicação</h2>
+    <hr>
+    <p>
+      Implementar ou manter um Mecanismo de Integridade efetivo demanda uma comunicação profissional, para assegurar sensibilização e conscientização dos diversos públicos na empresa, com regularidade. A Compliance Total oferece um plano de comunicação completo e disponibiliza diversas soluções customizáveis, prontas para aplicação imediata. Desenvolve também peças especiais sob demanda.
+    </p>
+    <h3>Produtos</h3>
+    <div class= 'row'>
+      
+      <% @produtos_da_comunicao.each do |produto| %>
+      <div class='col-4'>
+        <h4><%= produto.name %></h4>
+        <p><%= link_description(produto) %><%= link_to 'Saiba mais', "/product_comunication/#{produto.name_path}", class:'saiba-mais btn btn-primary' %></p>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</section>

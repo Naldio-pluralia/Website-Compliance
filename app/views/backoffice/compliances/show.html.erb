@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @backoffice_compliance.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @backoffice_compliance.body %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @backoffice_compliance.published_at %>
+</p>
+
+<%= link_to 'Edit', edit_backoffice_compliance_path(@backoffice_compliance) %> |
+<%= link_to 'Back', backoffice_compliances_path %>
